@@ -1,0 +1,9 @@
+component:
+  name: read_farmers_sangamon
+  read:
+    connection: read_local_files
+    local_file:
+      path: read_farmers_sangamon.csv
+      parser:
+        csv:
+          has_header: true

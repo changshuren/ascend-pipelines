@@ -1,0 +1,6 @@
+flow:
+  name: sangamon_county_frost_alerting
+  description: Predict late spring frost risk for Sangamon County peach growers and send scheduled alert and weather report emails.
+  version: 0.1.0
+  data_plane:
+    connection_name: data_plane_fabric
