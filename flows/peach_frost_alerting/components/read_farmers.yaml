@@ -1,0 +1,9 @@
+component:
+  name: read_farmers
+  read:
+    connection: read_local_files
+    local_file:
+      path: read_farmers.csv
+      parser:
+        csv:
+          has_header: true

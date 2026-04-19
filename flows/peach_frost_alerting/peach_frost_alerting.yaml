@@ -1,0 +1,6 @@
+flow:
+  name: peach_frost_alerting
+  description: Predict frost risk for peach growers using live weather history and forecasts, then alert opted-in farmers.
+  version: 0.1.0
+  data_plane:
+    connection_name: data_plane_fabric

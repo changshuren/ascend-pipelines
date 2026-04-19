@@ -1,0 +1,6 @@
+farmer_id,farmer_name,email,location_id,alert_opt_in,farm_name,state_province
+FARMER_001,Ava Thompson,ava.thompson@example.com,LOC_RALEIGH,true,Sunny Ridge Orchards,North Carolina
+FARMER_002,Elijah Brooks,elijah.brooks@example.com,LOC_ROANOKE,true,Blue Valley Peaches,Virginia
+FARMER_003,Mia Carter,mia.carter@example.com,LOC_ASHEVILLE,false,Mountain Bloom Farm,North Carolina
+FARMER_004,Noah Jenkins,noah.jenkins@example.com,LOC_FRESNO,true,Golden Stone Orchard,California
+FARMER_005,Sophia Reed,sophia.reed@example.com,LOC_GRAND_JUNCTION,true,Western Slope Peaches,Colorado

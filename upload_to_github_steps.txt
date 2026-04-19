@@ -1,0 +1,161 @@
+UPLOAD WIND ALERTING PROJECT TO GITHUB
+=====================================
+
+Goal
+----
+Upload the local Ascend backup folder:
+
+C:\Users\ISBE\ascend-pipelines
+
+to GitHub repo:
+
+https://github.com/changshuren/ascend-pipelines.git
+
+
+STEP 1 — Open Command Prompt
+----------------------------
+Open Windows Command Prompt.
+
+
+STEP 2 — Go to the project folder
+---------------------------------
+Run:
+
+cd C:\Users\ISBE\ascend-pipelines
+
+
+STEP 3 — Check Git status
+-------------------------
+Run:
+
+git status
+
+This shows which files are ready to be added.
+
+
+STEP 4 — Add all files
+----------------------
+Run:
+
+git add .
+
+
+STEP 5 — Commit files
+---------------------
+Run:
+
+git commit -m "Add Sangamon County wind alerting backup"
+
+If Git says user.name or user.email is not configured, run:
+
+git config --global user.name "changshuren"
+git config --global user.email "changshuren@gmail.com"
+
+Then run commit again:
+
+git commit -m "Add Sangamon County wind alerting backup"
+
+
+STEP 6 — Connect GitHub repo
+----------------------------
+If this is the first time connecting the repo, run:
+
+git remote add origin https://github.com/changshuren/ascend-pipelines.git
+
+If Git says "remote origin already exists", run:
+
+git remote set-url origin https://github.com/changshuren/ascend-pipelines.git
+
+
+STEP 7 — Set branch name
+------------------------
+Run:
+
+git branch -M main
+
+
+STEP 8 — Push to GitHub
+-----------------------
+Run:
+
+git push -u origin main
+
+Git may ask you to sign in using browser or Git Credential Manager.
+
+
+FULL COMMAND LIST
+-----------------
+If origin does not exist yet:
+
+cd C:\Users\ISBE\ascend-pipelines
+git status
+git add .
+git commit -m "Add Sangamon County wind alerting backup"
+git remote add origin https://github.com/changshuren/ascend-pipelines.git
+git branch -M main
+git push -u origin main
+
+
+If origin already exists:
+
+cd C:\Users\ISBE\ascend-pipelines
+git status
+git add .
+git commit -m "Add Sangamon County wind alerting backup"
+git remote set-url origin https://github.com/changshuren/ascend-pipelines.git
+git branch -M main
+git push -u origin main
+
+
+IF GIT ASKS FOR YOUR NAME AND EMAIL
+-----------------------------------
+Run:
+
+git config --global user.name "changshuren"
+git config --global user.email "changshuren@gmail.com"
+
+Then repeat:
+
+git commit -m "Add Sangamon County wind alerting backup"
+git push -u origin main
+
+
+HOW TO CHECK IF UPLOAD WORKED
+-----------------------------
+Open this page in your browser:
+
+https://github.com/changshuren/ascend-pipelines
+
+You should see folders/files like:
+- flows/sangamon_county_wind_alerting/
+- data/read_subscribers_sangamon.csv
+- other copied Ascend files
+
+
+COMMON ERRORS
+-------------
+1. "remote origin already exists"
+   Use:
+   git remote set-url origin https://github.com/changshuren/ascend-pipelines.git
+
+2. "Please tell me who you are"
+   Use:
+   git config --global user.name "changshuren"
+   git config --global user.email "changshuren@gmail.com"
+
+3. "failed to push some refs"
+   Usually means the GitHub repo already has content.
+   Ask Otto for the next fix.
+
+4. Authentication popup/browser sign-in
+   Complete the sign-in, then rerun:
+   git push -u origin main
+
+
+RECOMMENDED COMMIT MESSAGE
+--------------------------
+Add Sangamon County wind alerting backup
+
+Or if both flows were copied:
+
+Add Sangamon County frost and wind alerting backups
