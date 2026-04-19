@@ -1,0 +1,6 @@
+flow:
+  name: sangamon_county_wind_alerting
+  description: Predict hourly high-wind risk for Sangamon County operations, create alert-ready records, and support retrospective wind reporting.
+  version: 0.1.0
+  data_plane:
+    connection_name: data_plane_fabric

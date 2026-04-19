@@ -1,0 +1,6 @@
+farmer_id,farmer_name,email,location_id,alert_opt_in,farm_name,county_name,state_code
+SANGAMON_001,Evelyn Carter,evelyn.carter@example.com,LOC_SPRINGFIELD,true,Spring Creek Orchards,Sangamon,IL
+SANGAMON_002,Lucas Bennett,lucas.bennett@example.com,LOC_CHATHAM,true,Chatham Peach Farm,Sangamon,IL
+SANGAMON_003,Harper Collins,harper.collins@example.com,LOC_ROCHESTER,false,River Bend Orchard,Sangamon,IL
+SANGAMON_004,James Foster,james.foster@example.com,LOC_SHERMAN,true,Sherman Ridge Peaches,Sangamon,IL
+SANGAMON_005,Amelia Hayes,amelia.hayes@example.com,LOC_PAWNEE,true,Pawnee Blossom Farm,Sangamon,IL

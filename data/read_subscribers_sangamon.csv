@@ -1,0 +1,6 @@
+subscriber_id,company_name,email,location_id,alert_opt_in,service_type,county_name,state_code
+SANGAMON_SUB_001,Springfield Turf and Spray,springfield.turf@example.com,LOC_SPRINGFIELD,true,herbicide_spraying,Sangamon,IL
+SANGAMON_SUB_002,Chatham Mowing and Application,chatham.mowing@example.com,LOC_CHATHAM,true,mowing_and_spraying,Sangamon,IL
+SANGAMON_SUB_003,Rochester Field Services,rochester.field@example.com,LOC_ROCHESTER,false,herbicide_spraying,Sangamon,IL
+SANGAMON_SUB_004,Sherman Grounds Management,sherman.grounds@example.com,LOC_SHERMAN,true,mowing,Sangamon,IL
+SANGAMON_SUB_005,Mechanicsburg Ag Spray,mechanicsburg.spray@example.com,LOC_MECHANICSBURG,true,herbicide_spraying,Sangamon,IL

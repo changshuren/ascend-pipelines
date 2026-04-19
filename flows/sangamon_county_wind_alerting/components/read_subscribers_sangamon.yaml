@@ -1,0 +1,25 @@
+component:
+  name: read_subscribers_sangamon
+  description: Read subscribed commercial mowing and herbicide spraying companies in Sangamon County from a local CSV seed file.
+  read:
+    connection: read_local_files
+    local_file:
+      path: read_subscribers_sangamon.csv
+      parser:
+        csv:
+          header: true
+          auto_detect: true
+  tests:
+    columns:
+      subscriber_id:
+        - not_null
+        - unique
+      company_name:
+        - not_null
+      email:
+        - not_null
+      location_id:
+        - not_null
+    component:
+      - count_greater_than:
+          count: 0
