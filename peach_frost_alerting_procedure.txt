@@ -1,0 +1,182 @@
+PEACH FROST ALERTING BACKUP PROCEDURE
+====================================
+
+Goal
+----
+Back up the Ascend flow:
+
+flows/peach_frost_alerting/
+
+and its local dataset:
+
+data/read_farmers.csv
+
+into the local repo folder:
+
+C:\Users\ISBE\ascend-pipelines
+
+
+PART 1 — CREATE LOCAL FOLDERS
+-----------------------------
+Open Command Prompt and run:
+
+mkdir C:\Users\ISBE\ascend-pipelines\flows\peach_frost_alerting
+mkdir C:\Users\ISBE\ascend-pipelines\flows\peach_frost_alerting\components
+mkdir C:\Users\ISBE\ascend-pipelines\data
+
+If folders already exist, that is okay.
+
+
+PART 2 — FILES TO COPY
+----------------------
+
+A. Flow files
+-------------
+1.
+Ascend path:
+flows/peach_frost_alerting/peach_frost_alerting.yaml
+
+Save as:
+C:\Users\ISBE\ascend-pipelines\flows\peach_frost_alerting\peach_frost_alerting.yaml
+
+
+2.
+Ascend path:
+flows/peach_frost_alerting/README.md
+
+Save as:
+C:\Users\ISBE\ascend-pipelines\flows\peach_frost_alerting\README.md
+
+
+B. Component files
+------------------
+Save all of these into:
+
+C:\Users\ISBE\ascend-pipelines\flows\peach_frost_alerting\components\
+
+Files:
+
+read_farmers.yaml
+build_frost_risk_model.py
+score_weather_forecast.py
+build_historical_frost_features.py
+read_weather_history.py
+frost_alert_summary.sql
+send_frost_alert_emails.sql
+read_weather_forecast.py
+build_farmer_frost_alerts.sql
+
+
+C. Dataset file
+---------------
+Ascend path:
+data/read_farmers.csv
+
+Save as:
+C:\Users\ISBE\ascend-pipelines\data\read_farmers.csv
+
+
+PART 3 — HOW TO COPY EACH FILE
+------------------------------
+For each file in Ascend:
+
+1. Open the file in the Ascend editor
+2. Click inside the editor
+3. Press Ctrl + A
+4. Press Ctrl + C
+
+Then on your computer:
+
+1. Open Notepad or VS Code
+2. Press Ctrl + V
+3. Save the file in the correct local path
+4. Use the exact same file name
+
+
+PART 4 — RECOMMENDED COPY ORDER
+-------------------------------
+Copy files in this order:
+
+1. flows/peach_frost_alerting/peach_frost_alerting.yaml
+2. flows/peach_frost_alerting/README.md
+3. flows/peach_frost_alerting/components/read_farmers.yaml
+4. data/read_farmers.csv
+5. flows/peach_frost_alerting/components/build_frost_risk_model.py
+6. flows/peach_frost_alerting/components/score_weather_forecast.py
+7. flows/peach_frost_alerting/components/build_historical_frost_features.py
+8. flows/peach_frost_alerting/components/read_weather_history.py
+9. flows/peach_frost_alerting/components/frost_alert_summary.sql
+10. flows/peach_frost_alerting/components/send_frost_alert_emails.sql
+11. flows/peach_frost_alerting/components/read_weather_forecast.py
+12. flows/peach_frost_alerting/components/build_farmer_frost_alerts.sql
+
+
+PART 5 — VERIFY LOCAL FILES
+---------------------------
+After copying, run:
+
+dir /s C:\Users\ISBE\ascend-pipelines\flows\peach_frost_alerting
+dir /s C:\Users\ISBE\ascend-pipelines\data
+
+This lets you confirm the files exist.
+
+
+PART 6 — UPLOAD TO GITHUB
+-------------------------
+Open Command Prompt and run:
+
+cd C:\Users\ISBE\ascend-pipelines
+git status
+git add .
+git commit -m "Add peach_frost_alerting flow backup"
+git push
+
+If Git says there is no upstream branch, run:
+
+git push -u origin main
+
+
+PART 7 — VERIFY IN GITHUB
+-------------------------
+Open:
+
+https://github.com/changshuren/ascend-pipelines
+
+Check that you can see:
+
+- flows/peach_frost_alerting/
+- data/read_farmers.csv
+
+
+NOTES
+-----
+- The CSV shown in this project appears to be sample/demo data with example.com emails, so it is generally safe for a public backup.
+- If you later see any real private data, replace it with fake sample data before publishing.
+- If time is short, at minimum back up:
+  * peach_frost_alerting.yaml
+  * README.md
+  * read_farmers.yaml
+  * read_farmers.csv
+  * build_frost_risk_model.py
+  * build_farmer_frost_alerts.sql
+
+
+QUICK COMMANDS
+--------------
+Folder creation:
+
+mkdir C:\Users\ISBE\ascend-pipelines\flows\peach_frost_alerting
+mkdir C:\Users\ISBE\ascend-pipelines\flows\peach_frost_alerting\components
+mkdir C:\Users\ISBE\ascend-pipelines\data
+
+Git upload:
+
+cd C:\Users\ISBE\ascend-pipelines
+git status
+git add .
+git commit -m "Add peach_frost_alerting flow backup"
+git push
+
+If needed:
+
+git push -u origin main

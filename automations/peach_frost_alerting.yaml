@@ -1,0 +1,27 @@
+automation:
+  enabled: true
+  name: peach_frost_alerting
+  triggers:
+    sensors:
+      - type: timer
+        name: every-3-hours
+        config:
+          schedule:
+            cron: '0 */3 * * *'
+    events:
+      - types:
+          - FlowRunError
+        sql_filter: json_extract_string(event, '$.data.flow') = 'peach_frost_alerting'
+  actions:
+    - type: run_flow
+      name: run-peach-frost-alerting
+      config:
+        flow: peach_frost_alerting
+    - type: run_otto
+      name: diagnose-peach-frost-alerting-failure
+      config:
+        agent_name: frost_pipeline_monitor
+        prompt: |
+          Analyze the latest peach_frost_alerting flow failure.
+          Summarize likely root causes, impacted components, and safe next fixes.
+          Write a concise diagnostic summary suitable for a markdown report.

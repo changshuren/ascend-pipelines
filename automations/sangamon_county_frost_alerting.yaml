@@ -1,0 +1,32 @@
+automation:
+  enabled: true
+  name: sangamon_county_frost_alerting
+  triggers:
+    sensors:
+      - type: timer
+        name: pre-7am-frost-alert-run
+        config:
+          schedule:
+            cron: '0 6 * * *'
+      - type: timer
+        name: pre-noon-daily-report-run
+        config:
+          schedule:
+            cron: '0 11 * * *'
+    events:
+      - types:
+          - FlowRunError
+        sql_filter: json_extract_string(event, '$.data.flow') = 'sangamon_county_frost_alerting'
+  actions:
+    - type: run_flow
+      name: run-sangamon-county-frost-alerting
+      config:
+        flow: sangamon_county_frost_alerting
+    - type: run_otto
+      name: diagnose-sangamon-county-frost-alerting-failure
+      config:
+        agent_name: sangamon_frost_pipeline_monitor
+        prompt: |
+          Analyze the latest sangamon_county_frost_alerting flow failure.
+          Summarize likely root causes, impacted components, whether alerts should be paused, and the safest next fix.
+          Produce the output as a concise markdown diagnostic summary.
